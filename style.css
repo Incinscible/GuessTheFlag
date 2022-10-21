@@ -5,7 +5,7 @@
     border: 3px solid black ;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center; 
 }
 .drapeau {
@@ -19,7 +19,6 @@
 }
 
 .button1 {
-    transform: translateX(-1100px);
     background-color: black;
     color: white;
     border-radius: 8px;
@@ -28,7 +27,6 @@
 }
 
 .button2 {
-    transform: translateX(-800px); 
     border-radius: 8px; 
 }
 
@@ -45,6 +43,8 @@
     fill: blue;
 }
 
-.mapsl #AL {
-    fill: red;
+
+
+.check:after {
+    fill: green;
 }
