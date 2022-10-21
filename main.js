@@ -59,12 +59,14 @@ function test(code) {
     }
     else{
         triesNumber --;
-        getRandomFlag();
         changeColor(answerCode,"red");
         if(triesNumber < 0){
             alert("GAME OVER");
         }
-        document.getElementById("tries").innerHTML = 'Tentatives restantes : ' + triesNumber;
+        if (triesNumber>=0) {
+            getRandomFlag();
+            document.getElementById("tries").innerHTML = 'Tentatives restantes : ' + triesNumber;
+        }
     }
     document.getElementById("score").innerHTML = 'Score : ' + score;
     console.log("essais restant:" + triesNumber);
