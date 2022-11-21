@@ -16,6 +16,12 @@ function getRandomFlag() {
     document.getElementById("flag").src = "https://countryflagsapi.com/png/" + countriesCode[number].Code;
     countriesCode.splice(number, 1);
 }
+
+function getRandomLetter() {
+    let string = "abcdefghijklmnopqrstuvwxyz";
+    document.getElementById("nomPays").innerHTML = string[Math.floor(Math.random() * string.length)].toUpperCase()
+    
+}
 /*
 function changeMode(choix)
 {
