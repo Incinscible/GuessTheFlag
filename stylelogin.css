@@ -1,0 +1,183 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*fim css reset*/
+
+html,body{
+    font-family: 'Ubuntu', sans-serif;
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba(37,78,176,1) 0%, rgba(193,77,137,1) 100%) no-repeat;
+}
+
+.container{
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+    background:#fff;
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    padding:40px 40px 30px 40px;
+    border-radius:3px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+}
+
+.container>h1{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    align-self: center;
+    font-weight: 900;
+    margin:0 0 25px 0;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+input#email{
+    background-color: #E7E7E7;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 20px 10px;
+    border:1px solid #fff;
+    transition: border 0.5s ease-in-out;
+    height:40px;
+    text-indent: 20px;
+    border-radius: 3px;
+    opacity: 0.3;
+    margin-top:15px;
+}
+
+input#password{
+    background-color: #E7E7E7;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 20px 10px;
+    border:1px solid #fff;
+    transition: border 0.5s ease-in-out;
+    height:40px;
+    margin-top:15px;
+    margin-bottom:25px;
+    text-indent: 20px;
+    border-radius: 3px;
+    opacity: 0.3;
+}
+
+input#email:hover, input#password:hover{
+    border: 1px solid #010101;
+    transition: border 0.5s ease-in-out;
+}
+
+
+input::placeholder{
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+fieldset{
+    border: none;
+}
+
+
+.btn-submit{
+    padding:15px;
+    background-color: #C34C89;
+    color:#fff;
+    border:none;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-submit:hover{
+    background-color: #e56bac;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.container>p{
+    align-self: center;
+    color:#bababa;
+}
+
+
+
+.container>.signup>a{
+    color:#bababa;
+    transition: color 0.3s ease-in-out;
+}
+
+.container>.signup>a:hover{
+    color:#010101;
+    transition: color 0.3s ease-in-out;
+}
+
+.background-circle{
+    position: absolute;
+    bottom:-1420px;
+    left:-750px;
+    width:2000px;
+    height:2000px;
+    border-radius:52%;
+    background-color: #010101;
+    opacity:0.1;
+}
+
+@media(max-width:475px){
+    .background-circle{
+        display: none;
+    }
+}
