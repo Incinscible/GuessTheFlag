@@ -16,29 +16,25 @@ function getRandomFlag() {
     document.getElementById("flag").src = "https://countryflagsapi.com/png/" + countriesCode[number].Code;
     countriesCode.splice(number, 1);
 }
+/*
 function changeMode(choix)
 {
-    //getRandomFlag();
     if(choix == 1)
     {
         mode = choix;
         document.getElementById("mode").innerHTML = 'Mode Facile';
-        
     }
     if(choix == 2)
     {
         mode = choix;
-        document.getElementById("mode").innerHTML = 'Mode Difficile';
-        
+        document.getElementById("mode").innerHTML = 'Mode Difficile'; 
     }
 }
-
+*/
 function changeColor(code, color) {
     var styles = '.mapsl #'+code+' {' +
         'fill: '+color+';' +
         '}';
-
-
     var styleSheet = document.createElement("style")
     styleSheet.innerText = styles
     document.head.appendChild(styleSheet)
