@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <title>Trouves le Pays 2</title>
 </head>
-<body onload="getRandomLetter()">
+<body onload="getKeyValue('Start')">
     <div class="bandeau2">
         <p>Premiere lettre du Pays : </p>
         <div id = "nomPays">
         </div>
         <label for="reponse">Rentrez le nom du pays</label>
-        <input type="text" id="reponse">
+        <input type="text" id="reponse" onkeydown="getKeyValue(this)">
         <div id = "score">
             <p>Score : 0</p>
         </div>
