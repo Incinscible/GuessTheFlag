@@ -12,20 +12,24 @@ let countriesCode = [{"Code": "NP"}, {"Code": "AL"}, {"Code": "US"}, {"Code": "C
 let temps = 5;
 let isOver=false;
 let idFlag="FR";
-const timerElement = document.getElementById("timer");
+var countdownNumberEl = document.getElementById('countdown-number');
+var countdown = 10;
 setInterval(diminuerTemps, 1000);
-
+countdownNumberEl.textContent = countdown;
 
 function diminuerTemps() {
-    if (temps>=0) {
-        timerElement.innerText = "Temps restant : " + temps + "s";
-        temps--;
+    if (countdown>0) {
+        countdown--;
+        countdownNumberEl.textContent = countdown;
+        if(countdown == 0)
+        {
+            gameOver();
+        }
     }
     else {
         gameOver();
     }
 }
-
 
 function getRandomFlag() {
     let number = Math.floor(Math.random() * countriesCode.length);
@@ -61,9 +65,11 @@ function changeColor(code, color) {
     styleSheet.innerText = styles
     document.head.appendChild(styleSheet)
 }
-
-function gameOver() {
+async function gameOver() {
     if (!isOver) {
+        document.getElementById('mySvg').setAttribute("opacity", '0');
+        countdownNumberEl.textContent = "";
+        await sleep(100);
         var answerCode = document.getElementById("flag").src.slice(-2);
         isOver=true;
         changeColor(answerCode,"green");
@@ -103,5 +109,8 @@ function test(code) {
     console.log("essais restant:" + triesNumber);
     console.log("score :" + score);
     //console.log(code)
+}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
