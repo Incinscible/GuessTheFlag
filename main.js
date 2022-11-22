@@ -6,11 +6,12 @@
 let pays = {
 	"SO" : "Somalie",
 	"US" : "États-Unis",
-	"LB" : "Liban"
+	"LB" : "Liban",
+    "FR" : "France",
+    "CN" : "Chine"
 }
 let keys = Object.keys(pays)
 let number;
-//console.log(pays);
 let triesNumber = 2;
 let a = triesNumber;
 let score = 0;

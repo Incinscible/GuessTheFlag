@@ -49,18 +49,8 @@
 }
 .mapsl2 path {
     fill:black;
-    /*opacity: 0;*/
+    opacity: 0.08;
 }
-/*
-.mapsl2 #US{
-    fill: red;
-    opacity: 1;
-}
-.mapsl2 #AL{
-    fill: red;
-    opacity: 1;
-}
-*/
 .mapsl :hover {
     fill: blue;
 }
