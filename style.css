@@ -1,7 +1,7 @@
 .bandeau {
     width: 100%;
     height: 180px;
-    background-color: antiquewhite;
+    background-color: AliceBlue;
     border: 3px solid black ;
     position: relative;
     display: flex;
@@ -16,22 +16,29 @@
     height: 180px;
     background-color: lightblue;
     border: 3px solid black ;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
     align-items: center; 
+    font-weight: bold;
+    font-family: system-ui;
 }
 .drapeau {
     text-align: center;
     height: 100%;
 }
 
-.button1 {
-    background-color: black;
-    color: white;
+.user_btn{
+    background-color: transparent;
+    color: black;
+    border: none;
     border-radius: 8px;
     font-family: "Monaco", sans-serif;
     font-size: 20px;
 }
 
 .button2 {
+    color: black;
     border-radius: 8px;
     font-family: "Gill Sans Extrabold", sans-serif;
 }
@@ -45,7 +52,12 @@
 
 #score {
     font-family: "Impact", sans-serif;
-    font-size: 40px;
+    font-size: 25px;
+}
+
+#tries {
+    font-family: "Impact", sans-serif;
+    font-size: 25px;
 }
 
 #tries {
