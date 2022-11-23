@@ -16,12 +16,7 @@
     height: 180px;
     background-color: lightblue;
     border: 3px solid black ;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
     align-items: center; 
-    font-weight: bold;
-    font-family: system-ui;
 }
 .drapeau {
     text-align: center;
@@ -49,6 +44,11 @@
 }
 
 #score {
+    font-family: "Impact", sans-serif;
+    font-size: 40px;
+}
+
+#tries {
     font-family: "Impact", sans-serif;
     font-size: 40px;
 }
@@ -85,7 +85,7 @@ svg circle {
     stroke-dasharray: 113px;
     stroke-dashoffset: 0px;
     stroke-linecap: round;
-    stroke-width: 2px;
+    stroke-width: 4px;
     stroke: black;
     fill: none;
     animation: countdown 10s linear infinite forwards;
