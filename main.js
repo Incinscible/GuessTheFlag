@@ -22,7 +22,7 @@ let temps = 5;
 let isOver=false;
 let idFlag="FR";
 var countdownNumberEl = document.getElementById('countdown-number');
-var countdown = 10;
+var countdown = 180;
 setInterval(diminuerTemps, 1000);
 countdownNumberEl.textContent = countdown;
 
@@ -106,7 +106,7 @@ async function gameOver() {
         await sleep(100);
         var answerCode = document.getElementById("flag").src.slice(-2);
         isOver=true;
-        changeColor(answerCode,"green");
+        changeColor(answerCode,"red");
         alert("GAME OVER");
         triesNumber=-1;
     }
