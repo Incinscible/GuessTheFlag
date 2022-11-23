@@ -48,6 +48,11 @@
     font-size: 40px;
 }
 
+#tries {
+    font-family: "Impact", sans-serif;
+    font-size: 40px;
+}
+
 .mapsl path {
     fill:black;
 }
@@ -80,7 +85,7 @@ svg circle {
     stroke-dasharray: 113px;
     stroke-dashoffset: 0px;
     stroke-linecap: round;
-    stroke-width: 2px;
+    stroke-width: 4px;
     stroke: black;
     fill: none;
     animation: countdown 10s linear infinite forwards;
