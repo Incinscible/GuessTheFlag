@@ -3,53 +3,45 @@
 // Timer pour choix
 //
 //var pays = require('./pays.json');
- let pays = {
+let pays = {
 	"AD" : "Andorre",
-	"AE" : "Émirats Arabes Unis",
+	"AE" : "Ã‰mirats Arabes Unis",
 	"AF" : "Afghanistan",
 	"AG" : "Antigua-Et-Barbuda",
 	"AI" : "Anguilla",
 	"AL" : "Albanie",
-	"AM" : "Arménie",
+	"AM" : "ArmÃ©nie",
 	"AO" : "Angola",
-	"AP" : "Région Asie/Pacifique",
 	"AQ" : "Antarctique",
 	"AR" : "Argentine",
-	"AS" : "Samoa Américaines",
 	"AT" : "Autriche",
 	"AU" : "Australie",
 	"AW" : "Aruba",
-	"AX" : "Îles Åland",
-	"AZ" : "Azerbaïdjan",
-	"BA" : "Bosnie-Herzégovine",
-	"BB" : "Barbad",
+	"AZ" : "AzerbaÃ¯djan",
+	"BA" : "Bosnie-HerzÃ©govine",
+	"BB" : "Barbade",
 	"BD" : "Bangladesh",
 	"BE" : "Belgique",
 	"BF" : "Burkina Faso",
 	"BG" : "Bulgarie",
-	"BH" : "Bahreïn",
+	"BH" : "BahreÃ¯n",
 	"BI" : "Burundi",
-	"BJ" : "Bénin",
-	"BL" : "Saint-Barthélemy",
-	"BM" : "Bermudes",
-	"BN" : "Brunei Darussalam",
-	"BO" : "État Plurinational De Bolivie",
-	"BQ" : "Bonaire, Saint-Eustache Et Saba",
-	"BR" : "Brésil",
+	"BJ" : "BÃ©nin",
+	"BL" : "Saint-BarthÃ©lemy",
+	"BN" : "BruneÃ¯",
+	"BO" : "Bolivie",
+	"BR" : "BrÃ©sil",
 	"BS" : "Bahamas",
 	"BT" : "Bhoutan",
-	"BV" : "Île Bouvet",
 	"BW" : "Botswana",
-	"BY" : "Biélorussie",
+	"BY" : "BiÃ©lorussie",
 	"BZ" : "Belize",
 	"CA" : "Canada",
-	"CC" : "Îles Cocos",
-	"CD" : "République Démocratique Du Congo",
-	"CF" : "République Centrafricaine",
+	"CD" : "RÃ©publique DÃ©mocratique Du Congo",
+	"CF" : "RÃ©publique Centrafricaine",
 	"CG" : "Congo",
 	"CH" : "Suisse",
-	"CI" : "Côte D'Ivoire",
-	"CK" : "Îles Cook",
+	"CI" : "CÃ´te D'Ivoire",
 	"CL" : "Chili",
 	"CM" : "Cameroun",
 	"CN" : "Chine",
@@ -57,67 +49,55 @@
 	"CR" : "Costa Rica",
 	"CU" : "Cuba",
 	"CV" : "Cap-Vert",
-	"CW" : "Curaçao",
-	"CX" : "Île Christmas",
 	"CY" : "Chypre",
-	"CZ" : "République Tchèque",
+	"CZ" : "RÃ©publique TchÃ¨que",
 	"DE" : "Allemagne",
 	"DJ" : "Djibouti",
-	"DK" : "Denmark",
+	"DK" : "Danemark",
 	"DM" : "Dominique",
-	"DO" : "République Dominicaine",
-	"DZ" : "Algérie",
-	"EC" : "Équateur",
+	"DO" : "RÃ©publique Dominicaine",
+	"DZ" : "AlgÃ©rie",
+	"EC" : "Ã‰quateur",
 	"EE" : "Estonie",
-	"EG" : "Égypte",
+	"EG" : "Ã‰gypte",
 	"EH" : "Sahara Occidental",
-	"ER" : "Érythrée",
+	"ER" : "Ã‰rythrÃ©e",
 	"ES" : "Espagne",
-	"ET" : "Éthiopie",
-	"EU" : "Europe",
+	"ET" : "Ã‰thiopie",
 	"FI" : "Finlande",
 	"FJ" : "Fidji",
-	"FK" : "Îles Malouines",
-	"FM" : "États Fédérés De Micronésie",
-	"FO" : "Îles Féroé",
+	"FM" : "MicronÃ©sie",
 	"FR" : "France",
 	"GA" : "Gabon",
 	"GB" : "Royaume-Uni",
 	"GD" : "Grenade",
-	"GE" : "Géorgie",
+	"GE" : "GÃ©orgie",
 	"GF" : "Guyane",
-	"GG" : "Guernesey",
 	"GH" : "Ghana",
 	"GI" : "Gibraltar",
 	"GL" : "Groenland",
 	"GM" : "Gambie",
-	"GN" : "Guinée",
+	"GN" : "GuinÃ©e",
 	"GP" : "Guadeloupe",
-	"GQ" : "Guinée Équatoriale",
-	"GR" : "Grèce",
-	"GS" : "Géorgie Du Sud-Et-Les Îles Sandwich Du Sud",
+	"GQ" : "GuinÃ©e Ã‰quatoriale",
+	"GR" : "GrÃ¨ce",
 	"GT" : "Guatemala",
-	"GU" : "Guam",
-	"GW" : "Guinée-Bissau",
+	"GW" : "GuinÃ©e-Bissau",
 	"GY" : "Guyana",
-	"HK" : "Hong Kong",
-	"HM" : "Îles Heard-Et-MacDonald",
 	"HN" : "Honduras",
 	"HR" : "Croatie",
-	"HT" : "Haïti",
+	"HT" : "HaÃ¯ti",
 	"HU" : "Hongrie",
-	"ID" : "Indonésie",
+	"ID" : "IndonÃ©sie",
 	"IE" : "Irlande",
-	"IL" : "Israël",
-	"IM" : "Île De Man",
+	"IL" : "IsraÃ«l",
+	"IM" : "ÃŽle De Ma Grosse Bite",
 	"IN" : "Inde",
-	"IO" : "Territoire Britannique De L'océan Indien",
 	"IQ" : "Irak",
-	"IR" : "République Islamique D'Iran",
+	"IR" : "Iran",
 	"IS" : "Islande",
 	"IT" : "Italie",
-	"JE" : "Jersey",
-	"JM" : "Jamaïque",
+	"JM" : "JamaÃ¯que",
 	"JO" : "Jordanie",
 	"JP" : "Japon",
 	"KE" : "Kenya",
@@ -125,13 +105,12 @@
 	"KH" : "Cambodge",
 	"KI" : "Kiribati",
 	"KM" : "Comores",
-	"KN" : "Saint-Christophe-et-Niévès",
-	"KP" : "République Populaire Démocratique De Corée",
-	"KR" : "République De Corée",
-	"KW" : "Koweït",
-	"KY" : "Îles Caïmans",
+	"KN" : "Saint-Christophe-et-NiÃ©vÃ¨s",
+	"KP" : "CorÃ©e du Nord",
+	"KR" : "CorÃ©e du Sud",
+	"KW" : "KoweÃ¯t",
 	"KZ" : "Kazakhstan",
-	"LA" : "République Démocratique Populaire Lao",
+	"LA" : "Laos",
 	"LB" : "Liban",
 	"LC" : "Sainte-Lucie",
 	"LI" : "Liechtenstein",
@@ -144,20 +123,15 @@
 	"LY" : "Libye",
 	"MA" : "Maroc",
 	"MC" : "Monaco",
-	"MD" : "République De Moldavie",
-	"ME" : "Monténégro",
-	"MF" : "Saint-Martin (Partie Française)",
+	"MD" : "Moldavie",
+	"ME" : "MontÃ©nÃ©gro",
 	"MG" : "Madagascar",
-	"MH" : "Îles Marshall",
-	"MK" : "Macédoine",
+	"MH" : "ÃŽles Marshall",
+	"MK" : "MacÃ©doine",
 	"ML" : "Mali",
 	"MM" : "Birmanie",
 	"MN" : "Mongolie",
-	"MO" : "Macao",
-	"MP" : "Îles Mariannes Du Nord",
-	"MQ" : "Martinique",
 	"MR" : "Mauritanie",
-	"MS" : "Montserrat",
 	"MT" : "Malte",
 	"MU" : "Maurice",
 	"MV" : "Maldives",
@@ -166,92 +140,74 @@
 	"MY" : "Malaisie",
 	"MZ" : "Mozambique",
 	"NA" : "Namibie",
-	"NC" : "Nouvelle-Calédonie",
 	"NE" : "Niger",
-	"NF" : "Île Norfolk",
-	"NG" : "Nigéria",
+	"NG" : "NigÃ©ria",
 	"NI" : "Nicaragua",
 	"NL" : "Pays-Bas",
-	"NO" : "Norvège",
-	"NP" : "Népal",
+	"NO" : "NorvÃ¨ge",
+	"NP" : "NÃ©pal",
 	"NR" : "Nauru",
-	"NU" : "Niue",
-	"NZ" : "Nouvelle-Zélande",
+	"NZ" : "Nouvelle-ZÃ©lande",
 	"OM" : "Oman",
 	"PA" : "Panama",
-	"PE" : "Pérou",
-	"PF" : "Polynésie Française",
-	"PG" : "Papouasie-Nouvelle-Guinée",
+	"PE" : "PÃ©rou",
+	"PG" : "Papouasie-Nouvelle-GuinÃ©e",
 	"PH" : "Philippines",
 	"PK" : "Pakistan",
 	"PL" : "Pologne",
-	"PM" : "Saint-Pierre-Et-Miquelon",
-	"PN" : "Pitcairn",
 	"PR" : "Porto Rico",
-	"PS" : "Territoires Palestiniens Occupés",
+	"PS" : "Palestine",
 	"PT" : "Portugal",
 	"PW" : "Palaos",
 	"PY" : "Paraguay",
 	"QA" : "Qatar",
-	"RE" : "Réunion",
 	"RO" : "Roumanie",
 	"RS" : "Serbie",
-	"RU" : "Fédération De Russie",
+	"RU" : "Russie",
 	"RW" : "Rwanda",
 	"SA" : "Arabie Saoudite",
-	"SB" : "Îles Salomon",
+	"SB" : "ÃŽles Salomon",
 	"SC" : "Seychelles",
 	"SD" : "Soudan",
-	"SE" : "Suède",
+	"SE" : "SuÃ¨de",
 	"SG" : "Singapour",
-	"SH" : "Sainte-Hélène",
-	"SI" : "Slovénie",
-	"SJ" : "Svalbard Et Jan Mayen",
+	"SI" : "SlovÃ©nie",
 	"SK" : "Slovaquie",
 	"SL" : "Sierra Leone",
 	"SM" : "Saint-Marin",
-	"SN" : "Sénégal",
+	"SN" : "SÃ©nÃ©gal",
 	"SO" : "Somalie",
 	"SR" : "Suriname",
 	"SS" : "Soudan Du Sud",
-	"ST" : "Sao Tomé-Et-Principe",
-	"SV" : "République Du Salvador",
-	"SX" : "Saint-Martin (Partie Néerlandaise)",
-	"SY" : "République Arabe Syrienne",
+	"ST" : "Sao TomÃ©-Et-Principe",
+	"SV" : "RÃ©publique Du Salvador",
+	"SY" : "Syrie",
 	"SZ" : "Swaziland",
-	"TC" : "Îles Turks-Et-Caïcos",
 	"TD" : "Tchad",
-	"TF" : "Terres Australes Françaises",
 	"TG" : "Togo",
-	"TH" : "Thaïlande",
+	"TH" : "ThaÃ¯lande",
 	"TJ" : "Tadjikistan",
-	"TK" : "Tokelau",
-	"TL" : "Timor-Leste",
-	"TM" : "Turkménistan",
+	"TL" : "Timor-Oriental",
+	"TM" : "TurkmÃ©nistan",
 	"TN" : "Tunisie",
 	"TO" : "Tonga",
 	"TR" : "Turquie",
-	"TT" : "Trinité-Et-Tobago",
+	"TT" : "TrinitÃ©-Et-Tobago",
 	"TV" : "Tuvalu",
-	"TW" : "Taïwan",
-	"TZ" : "République-Unie De Tanzanie",
+	"TW" : "TaÃ¯wan",
+	"TZ" : "Tanzanie",
 	"UA" : "Ukraine",
 	"UG" : "Ouganda",
-	"UM" : "Îles Mineures Éloignées Des États-Unis",
-	"US" : "États-Unis",
+	"US" : "Ã‰tats-Unis",
 	"UY" : "Uruguay",
-	"UZ" : "Ouzbékistan",
-	"VA" : "Saint-Siège (État De La Cité Du Vatican)",
+	"UZ" : "OuzbÃ©kistan",
+	"VA" : "Vatican",
 	"VC" : "Saint-Vincent-Et-Les Grenadines",
 	"VE" : "Venezuela",
-	"VG" : "Îles Vierges Britanniques",
-	"VI" : "Îles Vierges Des États-Unis",
 	"VN" : "Viet Nam",
 	"VU" : "Vanuatu",
-	"WF" : "Wallis Et Futuna",
 	"WS" : "Samoa",
-	"YE" : "Yémen",
-	"YT" : "Mayotte",
+	"YE" : "YÃ©men",
 	"ZA" : "Afrique Du Sud",
 	"ZM" : "Zambie",
 	"ZW" : "Zimbabwe",
@@ -259,6 +215,10 @@
     "FR" : "France",
     "CN" : "Chine"
 }
+for([key, val] of Object.entries(pays)) {
+    pays[key]=strNoAccent(val).toUpperCase();
+    console.log(key,pays[key])
+  }
 let keys = Object.keys(pays);
 let values = Object.values(pays);
 let number;
@@ -273,11 +233,18 @@ let temps = 500;
 let isOver=false;
 let idFlag="FR";
 var countdownNumberEl = document.getElementById('countdown-number');
-<<<<<<< HEAD
-var countdown = 180;
-=======
 var countdown = 100;
->>>>>>> 94c569ce65db2992c0cd177248badd507cfd12c4
+function strNoAccent(a) {
+    var b="Ã¡Ã Ã¢Ã¤Ã£Ã¥Ã§Ã©Ã¨ÃªÃ«Ã­Ã¯Ã®Ã¬Ã±Ã³Ã²Ã´Ã¶ÃµÃºÃ¹Ã»Ã¼Ã½ÃÃ€Ã‚Ã„ÃƒÃ…Ã‡Ã‰ÃˆÃŠÃ‹ÃÃÃŽÃŒÃ‘Ã“Ã’Ã”Ã–Ã•ÃšÃ™Ã›ÃœÃ",
+        c="aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY",
+        d="";
+    for(var i = 0, j = a.length; i < j; i++) {
+      var e = a.substr(i, 1);
+      d += (b.indexOf(e) !== -1) ? c.substr(b.indexOf(e), 1) : e;
+    }
+    return d;
+}
+  
 setInterval(diminuerTemps, 1000);
 countdownNumberEl.textContent = countdown;
 
@@ -308,14 +275,16 @@ function getKeyValue(ele) {
         document.getElementById("nomPays").innerHTML = pays[keys[number]].charAt(0)
     }
     if(event.key === 'Enter') {
-        let input = document.getElementById("reponse")
+        let input = document.getElementById("reponse");
+        let answer = strNoAccent(input.value).toUpperCase();
+        console.log(answer);
         //values.includes(input) && 
-        if (values.includes(input.value) && input.value.charAt(0)===pays[keys[number]].charAt(0)) {
+        if (values.includes(input.value.toUpperCase()) && input.value.charAt(0)===pays[keys[number]].charAt(0)) {
             console.log(values)
-            console.log(values.indexOf(input.value));
-            changeColor2(keys[values.indexOf(input.value)], "green");
-            keys.splice(values.indexOf(input.value), 1);
-            values.splice(values.indexOf(input.value),1);
+            console.log(values.indexOf(input.value.toUpperCase()));
+            changeColor2(keys[values.indexOf(input.value.toUpperCase())], "green");
+            keys.splice(values.indexOf(input.value.toUpperCase()), 1);
+            values.splice(values.indexOf(input.value.toUpperCase()),1);
             number = Math.floor(Math.random() * keys.length);
             document.getElementById("nomPays").innerHTML = pays[keys[number]].charAt(0)
         }
@@ -371,7 +340,7 @@ async function gameOver() {
         await sleep(100);
         var answerCode = document.getElementById("flag").src.slice(-2);
         isOver=true;
-        changeColor(answerCode,"red");
+        changeColor(answerCode,"green");
         alert("GAME OVER");
         triesNumber=-1;
     }
@@ -390,7 +359,7 @@ function test(code) {
         try {
             getRandomFlag();
         } catch {
-            console.log("Période d'essai terminé");
+            console.log("PÃ©riode d'essai terminÃ©");
         }
         changeColor(answerCode,"green");
     }
