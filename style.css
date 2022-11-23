@@ -23,15 +23,17 @@
     height: 100%;
 }
 
-.button1 {
-    background-color: black;
-    color: white;
+.user_btn{
+    background-color: transparent;
+    color: black;
+    border: none;
     border-radius: 8px;
     font-family: "Monaco", sans-serif;
     font-size: 20px;
 }
 
 .button2 {
+    color: black;
     border-radius: 8px;
     font-family: "Gill Sans Extrabold", sans-serif;
 }
@@ -45,7 +47,12 @@
 
 #score {
     font-family: "Impact", sans-serif;
-    font-size: 40px;
+    font-size: 25px;
+}
+
+#tries {
+    font-family: "Impact", sans-serif;
+    font-size: 25px;
 }
 
 .mapsl path {
@@ -80,7 +87,7 @@ svg circle {
     stroke-dasharray: 113px;
     stroke-dashoffset: 0px;
     stroke-linecap: round;
-    stroke-width: 2px;
+    stroke-width: 4px;
     stroke: black;
     fill: none;
     animation: countdown 10s linear infinite forwards;
