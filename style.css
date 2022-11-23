@@ -16,7 +16,13 @@
     height: 180px;
     background-color: lightblue;
     border: 3px solid black ;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
     align-items: center; 
+    font-weight: bold;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    border-radius: 10px;
 }
 .drapeau {
     text-align: center;
