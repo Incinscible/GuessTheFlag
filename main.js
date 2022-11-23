@@ -3,9 +3,9 @@
 // Timer pour choix
 //
 //var pays = require('./pays.json');
- let pays = {
+let pays = {
 	"AD" : "Andorre",
-	"AE" : "Émirats Arabes Unis",
+	"AE" : "Emirats Arabes Unis",
 	"AF" : "Afghanistan",
 	"AG" : "Antigua-Et-Barbuda",
 	"AI" : "Anguilla",
@@ -27,7 +27,6 @@
 	"BH" : "Bahreïn",
 	"BI" : "Burundi",
 	"BJ" : "Bénin",
-	"BL" : "Saint-Barthélemy",
 	"BN" : "Bruneï",
 	"BO" : "Bolivie",
 	"BR" : "Brésil",
@@ -57,11 +56,11 @@
 	"DM" : "Dominique",
 	"DO" : "République Dominicaine",
 	"DZ" : "Algérie",
-	"EC" : "Équateur",
+	"EC" : "Equateur",
 	"EE" : "Estonie",
-	"EG" : "Égypte",
+	"EG" : "Egypte",
 	"EH" : "Sahara Occidental",
-	"ER" : "Érythrée",
+	"ER" : "Erythrée",
 	"ES" : "Espagne",
 	"ET" : "Éthiopie",
 	"FI" : "Finlande",
@@ -279,12 +278,14 @@ function getKeyValue(ele) {
         let answer = strNoAccent(input.value).toUpperCase();
         console.log(answer);
         //values.includes(input) && 
+
         if (values.includes(answer) && answer.charAt(0)===pays[keys[number]].charAt(0)) {
             console.log(values)
             console.log(values.indexOf(answer));
             changeColor2(keys[values.indexOf(answer)], "green");
             keys.splice(values.indexOf(answer), 1);
             values.splice(values.indexOf(answer),1);
+
             number = Math.floor(Math.random() * keys.length);
             document.getElementById("nomPays").innerHTML = pays[keys[number]].charAt(0)
         }
@@ -359,7 +360,7 @@ function test(code) {
         try {
             getRandomFlag();
         } catch {
-            console.log("Période d'essai terminé");
+            console.log("PÃ©riode d'essai terminÃ©");
         }
         changeColor(answerCode,"green");
     }
