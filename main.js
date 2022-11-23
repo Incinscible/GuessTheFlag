@@ -273,7 +273,11 @@ let temps = 500;
 let isOver=false;
 let idFlag="FR";
 var countdownNumberEl = document.getElementById('countdown-number');
+<<<<<<< HEAD
+var countdown = 180;
+=======
 var countdown = 100;
+>>>>>>> 94c569ce65db2992c0cd177248badd507cfd12c4
 setInterval(diminuerTemps, 1000);
 countdownNumberEl.textContent = countdown;
 
@@ -367,7 +371,7 @@ async function gameOver() {
         await sleep(100);
         var answerCode = document.getElementById("flag").src.slice(-2);
         isOver=true;
-        changeColor(answerCode,"green");
+        changeColor(answerCode,"red");
         alert("GAME OVER");
         triesNumber=-1;
     }
