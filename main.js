@@ -12,7 +12,6 @@ let pays = {
 	"AL" : "Albanie",
 	"AM" : "Arménie",
 	"AO" : "Angola",
-	"AQ" : "Antarctique",
 	"AR" : "Argentine",
 	"AT" : "Autriche",
 	"AU" : "Australie",
@@ -179,7 +178,7 @@ let pays = {
 	"SR" : "Suriname",
 	"SS" : "Soudan Du Sud",
 	"ST" : "Sao Tomé-Et-Principe",
-	"SV" : "République Du Salvador",
+	"SV" : "Salvador",
 	"SY" : "Syrie",
 	"SZ" : "Swaziland",
 	"TD" : "Tchad",
@@ -211,29 +210,200 @@ let pays = {
 	"ZM" : "Zambie",
 	"ZW" : "Zimbabwe",
 	"LB" : "Liban",
-    "FR" : "France",
-    "CN" : "Chine"
+}
+
+let paysSimplifie = {
+	"AE" : "Emirats Arabes Unis",
+	"AF" : "Afghanistan",
+	"AL" : "Albanie",
+	"AM" : "Arménie",
+	"AO" : "Angola",
+	"AR" : "Argentine",
+	"AT" : "Autriche",
+	"AU" : "Australie",
+	"AZ" : "Azerbaïdjan",
+	"BA" : "Bosnie-Herzégovine",
+	"BD" : "Bangladesh",
+	"BE" : "Belgique",
+	"BF" : "Burkina Faso",
+	"BG" : "Bulgarie",
+	"BI" : "Burundi",
+	"BJ" : "Bénin",
+	"BN" : "Bruneï",
+	"BO" : "Bolivie",
+	"BR" : "Brésil",
+	"BT" : "Bhoutan",
+	"BW" : "Botswana",
+	"BY" : "Biélorussie",
+	"BZ" : "Belize",
+	"CA" : "Canada",
+	"CD" : "République Démocratique Du Congo",
+	"CF" : "République Centrafricaine",
+	"CG" : "Congo",
+	"CH" : "Suisse",
+	"CI" : "Côte D'Ivoire",
+	"CL" : "Chili",
+	"CM" : "Cameroun",
+	"CN" : "Chine",
+	"CO" : "Colombie",
+	"CR" : "Costa Rica",
+	"CU" : "Cuba",
+	"CZ" : "République Tchèque",
+	"DE" : "Allemagne",
+	"DJ" : "Djibouti",
+	"DK" : "Danemark",
+	"DO" : "République Dominicaine",
+	"DZ" : "Algérie",
+	"EC" : "Equateur",
+	"EE" : "Estonie",
+	"EG" : "Egypte",
+	"EH" : "Sahara Occidental",
+	"ER" : "Erythrée",
+	"ES" : "Espagne",
+	"ET" : "Éthiopie",
+	"FI" : "Finlande",
+	"FJ" : "Fidji",
+	"FR" : "France",
+	"GA" : "Gabon",
+	"GB" : "Royaume-Uni",
+	"GE" : "Géorgie",
+	"GH" : "Ghana",
+	"GL" : "Groenland",
+	"GM" : "Gambie",
+	"GN" : "Guinée",
+	"GP" : "Guadeloupe",
+	"GQ" : "Guinée Équatoriale",
+	"GR" : "Grèce",
+	"GT" : "Guatemala",
+	"GW" : "Guinée-Bissau",
+	"GY" : "Guyana",
+	"HN" : "Honduras",
+	"HR" : "Croatie",
+	"HT" : "Haïti",
+	"HU" : "Hongrie",
+	"ID" : "Indonésie",
+	"IE" : "Irlande",
+	"IL" : "Israël",
+	"IN" : "Inde",
+	"IQ" : "Irak",
+	"IR" : "Iran",
+	"IS" : "Islande",
+	"IT" : "Italie",
+	"JM" : "Jamaïque",
+	"JO" : "Jordanie",
+	"JP" : "Japon",
+	"KE" : "Kenya",
+	"KG" : "Kirghizistan",
+	"KH" : "Cambodge",
+	"KP" : "Corée du Nord",
+	"KR" : "Corée du Sud",
+	"KW" : "Koweït",
+	"KZ" : "Kazakhstan",
+	"LA" : "Laos",
+	"LB" : "Liban",
+	"LK" : "Sri Lanka",
+	"LR" : "Liberia",
+	"LS" : "Lesotho",
+	"LT" : "Lituanie",
+	"LU" : "Luxembourg",
+	"LV" : "Lettonie",
+	"LY" : "Libye",
+	"MA" : "Maroc",
+	"MC" : "Monaco",
+	"MD" : "Moldavie",
+	"ME" : "Monténégro",
+	"MG" : "Madagascar",
+	"MK" : "Macédoine",
+	"ML" : "Mali",
+	"MM" : "Birmanie",
+	"MN" : "Mongolie",
+	"MR" : "Mauritanie",
+	"MW" : "Malawi",
+	"MX" : "Mexique",
+	"MY" : "Malaisie",
+	"MZ" : "Mozambique",
+	"NA" : "Namibie",
+	"NE" : "Niger",
+	"NG" : "Nigéria",
+	"NI" : "Nicaragua",
+	"NL" : "Pays-Bas",
+	"NO" : "Norvège",
+	"NP" : "Népal",
+	"NZ" : "Nouvelle-Zélande",
+	"OM" : "Oman",
+	"PA" : "Panama",
+	"PE" : "Pérou",
+	"PG" : "Papouasie-Nouvelle-Guinée",
+	"PH" : "Philippines",
+	"PK" : "Pakistan",
+	"PL" : "Pologne",
+	"PR" : "Porto Rico",
+	"PS" : "Palestine",
+	"PT" : "Portugal",
+	"PY" : "Paraguay",
+	"QA" : "Qatar",
+	"RO" : "Roumanie",
+	"RS" : "Serbie",
+	"RU" : "Russie",
+	"RW" : "Rwanda",
+	"SA" : "Arabie Saoudite",
+	"SD" : "Soudan",
+	"SE" : "Suède",
+	"SI" : "Slovénie",
+	"SK" : "Slovaquie",
+	"SL" : "Sierra Leone",
+	"SN" : "Sénégal",
+	"SO" : "Somalie",
+	"SR" : "Suriname",
+	"SS" : "Soudan Du Sud",
+	"SV" : "Salvador",
+	"SY" : "Syrie",
+	"SZ" : "Swaziland",
+	"TD" : "Tchad",
+	"TG" : "Togo",
+	"TH" : "Thaïlande",
+	"TJ" : "Tadjikistan",
+	"TL" : "Timor-Oriental",
+	"TM" : "Turkménistan",
+	"TN" : "Tunisie",
+	"TR" : "Turquie",
+	"TW" : "Taïwan",
+	"TZ" : "Tanzanie",
+	"UA" : "Ukraine",
+	"UG" : "Ouganda",
+	"US" : "États-Unis",
+	"UY" : "Uruguay",
+	"UZ" : "Ouzbékistan",
+	"VE" : "Venezuela",
+	"VN" : "Viet Nam",
+	"YE" : "Yémen",
+	"ZA" : "Afrique Du Sud",
+	"ZM" : "Zambie",
+	"ZW" : "Zimbabwe",
+	"LB" : "Liban",
 }
 for([key, val] of Object.entries(pays)) {
     pays[key]=strNoAccent(val).toUpperCase();
-    console.log(key,pays[key])
+    // console.log(key,pays[key])
   }
 let keys = Object.keys(pays);
 let values = Object.values(pays);
+let keysSimplifie = Object.keys(paysSimplifie);
+let valuesSimplifie = Object.values(paysSimplifie);
 let number;
-let triesNumber = 2;
+let triesNumber = 200;
 let a = triesNumber;
 let score = 0;
 let score2 = 0;
 let mode = 1;
-let countriesCode = [{"Code": "AW"}, {"Code": "PY"}, {"Code": "AL"}, {"Code": "MN"}, {"Code": "CW"}, {"Code": "BB"}, {"Code": "XK"}, {"Code": "AE"}, {"Code": "DM"}, {"Code": "DK"}, {"Code": "NL"}, {"Code": "EG"}, {"Code": "UG"}, {"Code": "SX"}, {"Code": "GM"}, {"Code": "NP"}, {"Code": "PH"}, {"Code": "NZ"}, {"Code": "IS"}, {"Code": "FR"}, {"Code": "PF"}, {"Code": "ID"}, {"Code": "NO"}, {"Code": "VU"}, {"Code": "TM"}, {"Code": "GW"}, {"Code": "BH"}, {"Code": "KN"}, {"Code": "MA"}, {"Code": "CZ"}, {"Code": "BI"}, {"Code": "FI"}, {"Code": "GB"}, {"Code": "PL"}, {"Code": "UA"}, {"Code": "LC"}, {"Code": "VG"}, {"Code": "LK"}, {"Code": "TG"}, {"Code": "ME"}, {"Code": "BL"}, {"Code": "NE"}, {"Code": "GT"}, {"Code": "NR"}, {"Code": "GE"}, {"Code": "LU"}, {"Code": "PR"}, {"Code": "BT"}, {"Code": "PE"}, {"Code": "AO"}, {"Code": "ZM"}, {"Code": "MP"}, {"Code": "UZ"}, {"Code": "KP"}, {"Code": "UY"}, {"Code": "QA"}, {"Code": "CY"}, {"Code": "MU"}, {"Code": "CV"}, {"Code": "KH"}, {"Code": "VN"}, {"Code": "NI"}, {"Code": "PA"}, {"Code": "ML"},{"Code": "AG"}, {"Code": "CR"}, {"Code": "PG"}, {"Code": "NC"}, {"Code": "GR"}, {"Code": "FJ"}, 
-{"Code": "WS"}, {"Code": "BF"}, {"Code": "TR"}, {"Code": "AZ"}, {"Code": "PS"}, {"Code": "BA"}, {"Code": "KM"}, {"Code": "MH"}, {"Code": "CO"}, {"Code": "KG"}, {"Code": "CM"}, {"Code": "GN"}, {"Code": "JO"}, {"Code": "DZ"}, {"Code": "YE"}, {"Code": "CL"}, {"Code": "MW"}, {"Code": "BD"}, {"Code": "SY"}, {"Code": "TZ"}, {"Code": "GQ"}, {"Code": "OM"}, {"Code": "SK"}, {"Code": "SD"}, {"Code": "MX"}, {"Code": "BR"}, {"Code": "TV"}, {"Code": "SV"}, {"Code": "JM"}, {"Code": "MT"}, {"Code": "PW"}, {"Code": "ET"}, {"Code": "LS"}, {"Code": "KZ"}, {"Code": "RS"}, {"Code": "TH"}, {"Code": "BY"}, {"Code": "CA"}, {"Code": "JP"}, {"Code": "MY"}, {"Code": "NA"}, {"Code": "SI"}, {"Code": "SO"}, {"Code": "BS"}, {"Code": "AR"}, {"Code": "KE"}, {"Code": "MD"}, {"Code": "HU"}, {"Code": "SN"}, {"Code": "TC"}, {"Code": "GY"}, {"Code": "LR"}, {"Code": "BE"}, {"Code": "LB"}, {"Code": "GD"}, {"Code": "MQ"}, {"Code": "SR"}, {"Code": "IR"}, {"Code": "KY"}, {"Code": "SS"}, {"Code": "IL"}, {"Code": "SE"}, {"Code": "BZ"}, {"Code": "AF"}, {"Code": "SL"}, {"Code": "BW"}, {"Code": "VE"}, {"Code": "RE"}, {"Code": "RU"}, {"Code": "ES"}, {"Code": "GH"}, {"Code": "SA"}, {"Code": "SC"}, {"Code": "EC"}, {"Code": "TO"}, {"Code": "BM"}, {"Code": "TW"}, {"Code": "IT"}, {"Code": "MZ"}, {"Code": "DJ"}, {"Code": "EE"}, {"Code": "BG"}, {"Code": "MF"}, {"Code": "SB"}, {"Code": "CI"}, {"Code": "TN"}, {"Code": "MV"}, {"Code": "LY"}, {"Code": "AU"}, {"Code": "NG"}, {"Code": "RO"}, {"Code": "IQ"}, {"Code": "DE"}, {"Code": "KR"}, {"Code": "MM"}, {"Code": "LA"}, {"Code": "AM"}, {"Code": "CH"}, {"Code": "US"}, {"Code": "CN"}, {"Code": "AI"}, {"Code": "DO"}, {"Code": "BO"}, {"Code": "PT"}, {"Code": "YT"}, {"Code": "MR"}, {"Code": "MG"}, {"Code": "GU"}, {"Code": "HR"}, {"Code": "PK"}, {"Code": "AT"}, {"Code": "GF"}, {"Code": "GA"}, {"Code": "IE"}, {"Code": "BJ"}, {"Code": "ZA"}, {"Code": "TJ"}, {"Code": "IN"}, {"Code": "EH"}, {"Code": "LV"}, {"Code": "HT"}, {"Code": "TD"}, {"Code": "LT"}, {"Code": "TL"}, {"Code": "GL"}, {"Code": "RW"}, {"Code": "CD"}, {"Code": "HN"}, {"Code": "KW"}, {"Code": "BN"}, {"Code": "TT"}, {"Code": "ZW"}, {"Code": "VC"}, {"Code": "SZ"}, {"Code": "MK"}, {"Code": "CG"}, {"Code": "CF"}, {"Code": "AS"}, {"Code": "CU"}, {"Code": "MS"}, {"Code": "ER"}, {"Code": "GP"}]
+//let countriesCode = [{"Code": "AW"}, {"Code": "PY"}, {"Code": "AL"}, {"Code": "MN"}, {"Code": "CW"}, {"Code": "BB"}, {"Code": "XK"}, {"Code": "AE"}, {"Code": "DM"}, {"Code": "DK"}, {"Code": "NL"}, {"Code": "EG"}, {"Code": "UG"}, {"Code": "SX"}, {"Code": "GM"}, {"Code": "NP"}, {"Code": "PH"}, {"Code": "NZ"}, {"Code": "IS"}, {"Code": "FR"}, {"Code": "PF"}, {"Code": "ID"}, {"Code": "NO"}, {"Code": "VU"}, {"Code": "TM"}, {"Code": "GW"}, {"Code": "BH"}, {"Code": "KN"}, {"Code": "MA"}, {"Code": "CZ"}, {"Code": "BI"}, {"Code": "FI"}, {"Code": "GB"}, {"Code": "PL"}, {"Code": "UA"}, {"Code": "LC"}, {"Code": "VG"}, {"Code": "LK"}, {"Code": "TG"}, {"Code": "ME"}, {"Code": "BL"}, {"Code": "NE"}, {"Code": "GT"}, {"Code": "NR"}, {"Code": "GE"}, {"Code": "LU"}, {"Code": "PR"}, {"Code": "BT"}, {"Code": "PE"}, {"Code": "AO"}, {"Code": "ZM"}, {"Code": "MP"}, {"Code": "UZ"}, {"Code": "KP"}, {"Code": "UY"}, {"Code": "QA"}, {"Code": "CY"}, {"Code": "MU"}, {"Code": "CV"}, {"Code": "KH"}, {"Code": "VN"}, {"Code": "NI"}, {"Code": "PA"}, {"Code": "ML"},{"Code": "AG"}, {"Code": "CR"}, {"Code": "PG"}, {"Code": "NC"}, {"Code": "GR"}, {"Code": "FJ"}, 
+//{"Code": "WS"}, {"Code": "BF"}, {"Code": "TR"}, {"Code": "AZ"}, {"Code": "PS"}, {"Code": "BA"}, {"Code": "KM"}, {"Code": "MH"}, {"Code": "CO"}, {"Code": "KG"}, {"Code": "CM"}, {"Code": "GN"}, {"Code": "JO"}, {"Code": "DZ"}, {"Code": "YE"}, {"Code": "CL"}, {"Code": "MW"}, {"Code": "BD"}, {"Code": "SY"}, {"Code": "TZ"}, {"Code": "GQ"}, {"Code": "OM"}, {"Code": "SK"}, {"Code": "SD"}, {"Code": "MX"}, {"Code": "BR"}, {"Code": "TV"}, {"Code": "SV"}, {"Code": "JM"}, {"Code": "MT"}, {"Code": "PW"}, {"Code": "ET"}, {"Code": "LS"}, {"Code": "KZ"}, {"Code": "RS"}, {"Code": "TH"}, {"Code": "BY"}, {"Code": "CA"}, {"Code": "JP"}, {"Code": "MY"}, {"Code": "NA"}, {"Code": "SI"}, {"Code": "SO"}, {"Code": "BS"}, {"Code": "AR"}, {"Code": "KE"}, {"Code": "MD"}, {"Code": "HU"}, {"Code": "SN"}, {"Code": "TC"}, {"Code": "GY"}, {"Code": "LR"}, {"Code": "BE"}, {"Code": "LB"}, {"Code": "GD"}, {"Code": "MQ"}, {"Code": "SR"}, {"Code": "IR"}, {"Code": "KY"}, {"Code": "SS"}, {"Code": "IL"}, {"Code": "SE"}, {"Code": "BZ"}, {"Code": "AF"}, {"Code": "SL"}, {"Code": "BW"}, {"Code": "VE"}, {"Code": "RE"}, {"Code": "RU"}, {"Code": "ES"}, {"Code": "GH"}, {"Code": "SA"}, {"Code": "SC"}, {"Code": "EC"}, {"Code": "TO"}, {"Code": "BM"}, {"Code": "TW"}, {"Code": "IT"}, {"Code": "MZ"}, {"Code": "DJ"}, {"Code": "EE"}, {"Code": "BG"}, {"Code": "MF"}, {"Code": "SB"}, {"Code": "CI"}, {"Code": "TN"}, {"Code": "MV"}, {"Code": "LY"}, {"Code": "AU"}, {"Code": "NG"}, {"Code": "RO"}, {"Code": "IQ"}, {"Code": "DE"}, {"Code": "KR"}, {"Code": "MM"}, {"Code": "LA"}, {"Code": "AM"}, {"Code": "CH"}, {"Code": "US"}, {"Code": "CN"}, {"Code": "AI"}, {"Code": "DO"}, {"Code": "BO"}, {"Code": "PT"}, {"Code": "YT"}, {"Code": "MR"}, {"Code": "MG"}, {"Code": "GU"}, {"Code": "HR"}, {"Code": "PK"}, {"Code": "AT"}, {"Code": "GF"}, {"Code": "GA"}, {"Code": "IE"}, {"Code": "BJ"}, {"Code": "ZA"}, {"Code": "TJ"}, {"Code": "IN"}, {"Code": "EH"}, {"Code": "LV"}, {"Code": "HT"}, {"Code": "TD"}, {"Code": "LT"}, {"Code": "TL"}, {"Code": "GL"}, {"Code": "RW"}, {"Code": "CD"}, {"Code": "HN"}, {"Code": "KW"}, {"Code": "BN"}, {"Code": "TT"}, {"Code": "ZW"}, {"Code": "VC"}, {"Code": "SZ"}, {"Code": "MK"}, {"Code": "CG"}, {"Code": "CF"}, {"Code": "AS"}, {"Code": "CU"}, {"Code": "MS"}, {"Code": "ER"}, {"Code": "GP"}]
 //let countriesCode = [{"Code": "NP"}, {"Code": "AL"}, {"Code": "US"}, {"Code": "CH"}];
 let temps = 500;
 let isOver=false;
 let idFlag="FR";
 var countdownNumberEl = document.getElementById('countdown-number');
-var countdown = 100;
+var countdown = 500;
 function strNoAccent(a) {
     var b="áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ",
         c="aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY",
@@ -263,9 +433,11 @@ function diminuerTemps() {
 }
 
 function getRandomFlag() {
-    let number = Math.floor(Math.random() * countriesCode.length);
-    document.getElementById("flag").src = "https://countryflagsapi.com/png/" + countriesCode[number].Code;
-    countriesCode.splice(number, 1);
+    let number = Math.floor(Math.random() * keysSimplifie.length);
+	console.log(keysSimplifie[number])
+    document.getElementById("flag").src = "https://countryflagsapi.com/png/" + keysSimplifie[number];
+    keysSimplifie.splice(number, 1);
+    valuesSimplifie.splice(number, 1);
 }
 
 function getKeyValue(ele) {
@@ -347,14 +519,14 @@ async function gameOver() {
         await sleep(100);
         var answerCode = document.getElementById("flag").src.slice(-2);
         isOver=true;
-        changeColor(answerCode,"green");
+        changeColor(answerCode,"red");
         alert("GAME OVER");
         triesNumber=-1;
     }
 }
 
 function test(code) {
-    console.log(code);
+	console.log(pays[code]);
     var answerCode = document.getElementById("flag").src.slice(-2);
     if (isOver) {
         return;
