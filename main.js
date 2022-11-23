@@ -215,10 +215,10 @@
     "FR" : "France",
     "CN" : "Chine"
 }
-// for (let i in pays) {
-//     i=strNoAccent(pays[i]).toUpperCase();
-// }
-// console.log(Object.values(pays[0]));
+for([key, val] of Object.entries(pays)) {
+    pays[key]=strNoAccent(val).toUpperCase();
+    console.log(key,pays[key])
+  }
 let keys = Object.keys(pays);
 let values = Object.values(pays);
 let number;
@@ -275,14 +275,16 @@ function getKeyValue(ele) {
         document.getElementById("nomPays").innerHTML = pays[keys[number]].charAt(0)
     }
     if(event.key === 'Enter') {
-        let input = document.getElementById("reponse")
+        let input = document.getElementById("reponse");
+        let answer = strNoAccent(input.value).toUpperCase();
+        console.log(answer);
         //values.includes(input) && 
-        if (values.includes(input.value) && input.value.charAt(0)===pays[keys[number]].charAt(0)) {
+        if (values.includes(answer) && answer.charAt(0)===pays[keys[number]].charAt(0)) {
             console.log(values)
-            console.log(values.indexOf(input.value));
-            changeColor2(keys[values.indexOf(input.value)], "green");
-            keys.splice(values.indexOf(input.value), 1);
-            values.splice(values.indexOf(input.value),1);
+            console.log(values.indexOf(answer));
+            changeColor2(keys[values.indexOf(answer)], "green");
+            keys.splice(values.indexOf(answer), 1);
+            values.splice(values.indexOf(answer),1);
             number = Math.floor(Math.random() * keys.length);
             document.getElementById("nomPays").innerHTML = pays[keys[number]].charAt(0)
         }
