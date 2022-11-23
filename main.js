@@ -239,6 +239,7 @@
 	"UG" : "Ouganda",
 	"UM" : "Îles Mineures Éloignées Des États-Unis",
 	"US" : "États-Unis",
+<<<<<<< HEAD
 	"UY" : "Uruguay",
 	"UZ" : "Ouzbékistan",
 	"VA" : "Saint-Siège (État De La Cité Du Vatican)",
@@ -255,10 +256,14 @@
 	"ZA" : "Afrique Du Sud",
 	"ZM" : "Zambie",
 	"ZW" : "Zimbabwe"
+=======
+	"LB" : "Liban",
+    "FR" : "France",
+    "CN" : "Chine"
+>>>>>>> becf28d08e73ce0804bc5928809837705c44f225
 }
 let keys = Object.keys(pays)
 let number;
-//console.log(pays);
 let triesNumber = 2;
 let a = triesNumber;
 let score = 0;
@@ -269,14 +274,19 @@ let countriesCode = [{"Code": "AW"}, {"Code": "PY"}, {"Code": "AL"}, {"Code": "M
 let temps = 500;
 let isOver=false;
 let idFlag="FR";
-const timerElement = document.getElementById("timer");
+var countdownNumberEl = document.getElementById('countdown-number');
+var countdown = 10;
 setInterval(diminuerTemps, 1000);
-
+countdownNumberEl.textContent = countdown;
 
 function diminuerTemps() {
-    if (temps>=0) {
-        timerElement.innerText = "Temps restant : " + temps + "s";
-        temps--;
+    if (countdown>0) {
+        countdown--;
+        countdownNumberEl.textContent = countdown;
+        if(countdown == 0)
+        {
+            gameOver();
+        }
     }
     else {
         gameOver();
@@ -330,6 +340,7 @@ function changeColor(code, color) {
     styleSheet.innerText = styles
     document.head.appendChild(styleSheet)
 }
+
 function changeColor2(code, color) {
     var styles = '.mapsl2 #'+code+' {' +
         'fill: '+color+';'
@@ -341,8 +352,11 @@ function changeColor2(code, color) {
     document.head.appendChild(styleSheet)
 }
 
-function gameOver() {
+async function gameOver() {
     if (!isOver) {
+        document.getElementById('mySvg').setAttribute("opacity", '0');
+        countdownNumberEl.textContent = "";
+        await sleep(100);
         var answerCode = document.getElementById("flag").src.slice(-2);
         isOver=true;
         changeColor(answerCode,"green");
@@ -383,5 +397,8 @@ function test(code) {
     console.log("essais restant:" + triesNumber);
     console.log("score :" + score);
     //console.log(code)
+}
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 

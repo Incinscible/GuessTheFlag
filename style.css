@@ -1,14 +1,15 @@
 .bandeau {
     width: 100%;
     height: 180px;
-    background-color: lightblue;
+    background-color: antiquewhite;
     border: 3px solid black ;
     position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center; 
     font-weight: bold;
-    font-family: system-ui;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    border-radius: 10px;
 }
 .bandeau2 {
     width: 100%;
@@ -27,26 +28,29 @@
     height: 100%;
 }
 
-.texte {
-    transform: translateX(-1050px);
-    font-size: 30px;
-}
-
 .button1 {
     background-color: black;
     color: white;
     border-radius: 8px;
-    font-family: "Open Sans";
+    font-family: "Monaco", sans-serif;
     font-size: 20px;
 }
 
 .button2 {
-    border-radius: 8px; 
+    border-radius: 8px;
+    font-family: "Gill Sans Extrabold", sans-serif;
 }
 
 .img {
     user-select: none;
-    height: 100%;
+    height: 90%;
+    border-radius: 10px;
+    margin-top : 3%;
+}
+
+#score {
+    font-family: "Impact", sans-serif;
+    font-size: 40px;
 }
 
 .mapsl path {
@@ -54,18 +58,48 @@
 }
 .mapsl2 path {
     fill:black;
-    /*opacity: 0;*/
+    opacity: 0.07;
 }
-/*
-.mapsl2 #US{
-    fill: red;
-    opacity: 1;
+#countdown {
+    position: relative;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
 }
-.mapsl2 #AL{
-    fill: red;
-    opacity: 1;
+#countdown-number {
+    color: black;
+    display: inline-block;
+    line-height: 40px;
 }
-*/
+#mySvg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: black;
+    fill: none;
+    animation: countdown 10s linear infinite forwards;
+}
+
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+    to {
+        stroke-dashoffset: 113px;
+    }
+}
+
 .mapsl :hover {
     fill: blue;
 }
