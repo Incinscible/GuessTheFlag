@@ -259,7 +259,8 @@
     "FR" : "France",
     "CN" : "Chine"
 }
-let keys = Object.keys(pays)
+let keys = Object.keys(pays);
+let values = Object.values(pays);
 let number;
 let triesNumber = 2;
 let a = triesNumber;
@@ -304,13 +305,23 @@ function getKeyValue(ele) {
     }
     if(event.key === 'Enter') {
         let input = document.getElementById("reponse")
-        if(input.value === pays[keys[number]])
-        {
-            changeColor2(keys[number], "green")
-            keys.splice(number, 1);
+        //values.includes(input) && 
+        if (values.includes(input.value) && input.value.charAt(0)===pays[keys[number]].charAt(0)) {
+            console.log(values)
+            console.log(values.indexOf(input.value));
+            changeColor2(keys[values.indexOf(input.value)], "green");
+            keys.splice(values.indexOf(input.value), 1);
+            values.splice(values.indexOf(input.value),1);
             number = Math.floor(Math.random() * keys.length);
             document.getElementById("nomPays").innerHTML = pays[keys[number]].charAt(0)
         }
+        // if(input.value === pays[keys[number]])
+        // {
+        //     changeColor2(keys[number], "green")
+        //     keys.splice(number, 1);
+        //     number = Math.floor(Math.random() * keys.length);
+        //     document.getElementById("nomPays").innerHTML = pays[keys[number]].charAt(0)
+        // }
        input.value = ""
     }
 }
