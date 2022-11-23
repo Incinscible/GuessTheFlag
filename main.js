@@ -239,7 +239,6 @@
 	"UG" : "Ouganda",
 	"UM" : "Îles Mineures Éloignées Des États-Unis",
 	"US" : "États-Unis",
-<<<<<<< HEAD
 	"UY" : "Uruguay",
 	"UZ" : "Ouzbékistan",
 	"VA" : "Saint-Siège (État De La Cité Du Vatican)",
@@ -255,12 +254,10 @@
 	"YT" : "Mayotte",
 	"ZA" : "Afrique Du Sud",
 	"ZM" : "Zambie",
-	"ZW" : "Zimbabwe"
-=======
+	"ZW" : "Zimbabwe",
 	"LB" : "Liban",
     "FR" : "France",
     "CN" : "Chine"
->>>>>>> becf28d08e73ce0804bc5928809837705c44f225
 }
 let keys = Object.keys(pays)
 let number;
@@ -275,7 +272,7 @@ let temps = 500;
 let isOver=false;
 let idFlag="FR";
 var countdownNumberEl = document.getElementById('countdown-number');
-var countdown = 10;
+var countdown = 100;
 setInterval(diminuerTemps, 1000);
 countdownNumberEl.textContent = countdown;
 
