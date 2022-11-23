@@ -60,6 +60,11 @@
     font-size: 25px;
 }
 
+#tries {
+    font-family: "Impact", sans-serif;
+    font-size: 40px;
+}
+
 .mapsl path {
     fill:black;
 }
