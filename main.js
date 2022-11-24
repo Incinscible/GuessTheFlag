@@ -4,6 +4,7 @@
 //
 //var pays = require('./pays.json');
 let pays = {
+	"XK" : "Kosovo",
 	"AD" : "Andorre",
 	"AE" : "Emirats Arabes Unis",
 	"AF" : "Afghanistan",
@@ -213,6 +214,7 @@ let pays = {
 }
 
 let paysSimplifie = {
+	"XK" : "Kosovo",
 	"AE" : "Emirats Arabes Unis",
 	"AF" : "Afghanistan",
 	"AL" : "Albanie",
@@ -271,7 +273,6 @@ let paysSimplifie = {
 	"GL" : "Groenland",
 	"GM" : "Gambie",
 	"GN" : "Guinée",
-	"GP" : "Guadeloupe",
 	"GQ" : "Guinée Équatoriale",
 	"GR" : "Grèce",
 	"GT" : "Guatemala",
@@ -405,8 +406,8 @@ let idFlag="FR";
 var countdownNumberEl = document.getElementById('countdown-number');
 var countdown = 500;
 function strNoAccent(a) {
-    var b="áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ",
-        c="aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY",
+    var b="áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ-",
+        c="aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY ",
         d="";
     for(var i = 0, j = a.length; i < j; i++) {
       var e = a.substr(i, 1);
@@ -434,10 +435,9 @@ function diminuerTemps() {
 
 function getRandomFlag() {
     let number = Math.floor(Math.random() * keysSimplifie.length);
-	console.log(keysSimplifie[number])
+	// console.log(keysSimplifie[number])
     document.getElementById("flag").src = "https://countryflagsapi.com/png/" + keysSimplifie[number];
     keysSimplifie.splice(number, 1);
-    valuesSimplifie.splice(number, 1);
 }
 
 function getKeyValue(ele) {
@@ -452,12 +452,12 @@ function getKeyValue(ele) {
 		if (answer==="J'AIME LA GROSSE QUEUE D'ILIAN") {
 			score2+=500;
 		}
-        console.log(answer);
+        // console.log(answer);
         //values.includes(input) && 
 
         if (values.includes(answer) && answer.charAt(0)===pays[keys[number]].charAt(0)) {
-            console.log(values)
-            console.log(values.indexOf(answer));
+            // console.log(values)
+            // console.log(values.indexOf(answer));
             changeColor2(keys[values.indexOf(answer)], "green");
             keys.splice(values.indexOf(answer), 1);
             values.splice(values.indexOf(answer),1);
@@ -526,7 +526,7 @@ async function gameOver() {
 }
 
 function test(code) {
-	console.log(pays[code]);
+	// console.log(pays[code]);
     var answerCode = document.getElementById("flag").src.slice(-2);
     if (isOver) {
         return;
@@ -554,8 +554,8 @@ function test(code) {
         }
     }
     document.getElementById("score").innerHTML = 'Score : ' + score;
-    console.log("essais restant:" + triesNumber);
-    console.log("score :" + score);
+    // console.log("essais restant:" + triesNumber);
+    // console.log("score :" + score);
     //console.log(code)
 }
 function sleep(ms) {
