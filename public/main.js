@@ -1,10 +1,4 @@
-// Mode simple/difficile
-// Streak de bonnes reponses
-// Timer pour choix
-//
-//var pays = require('./pays.json');
 let pays = {
-	"XK" : "Kosovo",
 	"AD" : "Andorre",
 	"AE" : "Emirats Arabes Unis",
 	"AF" : "Afghanistan",
@@ -212,9 +206,7 @@ let pays = {
 	"ZW" : "Zimbabwe",
 	"LB" : "Liban",
 }
-
 let paysSimplifie = {
-	"XK" : "Kosovo",
 	"AE" : "Emirats Arabes Unis",
 	"AF" : "Afghanistan",
 	"AL" : "Albanie",
@@ -385,7 +377,6 @@ let paysSimplifie = {
 }
 for([key, val] of Object.entries(pays)) {
     pays[key]=strNoAccent(val).toUpperCase();
-    // console.log(key,pays[key])
   }
 let keys = Object.keys(pays);
 let values = Object.values(pays);
@@ -393,21 +384,15 @@ let keysSimplifie = Object.keys(paysSimplifie);
 let valuesSimplifie = Object.values(paysSimplifie);
 let number;
 let triesNumber = 200;
-let a = triesNumber;
 let score = 0;
 let score2 = 0;
-let mode = 1;
-//let countriesCode = [{"Code": "AW"}, {"Code": "PY"}, {"Code": "AL"}, {"Code": "MN"}, {"Code": "CW"}, {"Code": "BB"}, {"Code": "XK"}, {"Code": "AE"}, {"Code": "DM"}, {"Code": "DK"}, {"Code": "NL"}, {"Code": "EG"}, {"Code": "UG"}, {"Code": "SX"}, {"Code": "GM"}, {"Code": "NP"}, {"Code": "PH"}, {"Code": "NZ"}, {"Code": "IS"}, {"Code": "FR"}, {"Code": "PF"}, {"Code": "ID"}, {"Code": "NO"}, {"Code": "VU"}, {"Code": "TM"}, {"Code": "GW"}, {"Code": "BH"}, {"Code": "KN"}, {"Code": "MA"}, {"Code": "CZ"}, {"Code": "BI"}, {"Code": "FI"}, {"Code": "GB"}, {"Code": "PL"}, {"Code": "UA"}, {"Code": "LC"}, {"Code": "VG"}, {"Code": "LK"}, {"Code": "TG"}, {"Code": "ME"}, {"Code": "BL"}, {"Code": "NE"}, {"Code": "GT"}, {"Code": "NR"}, {"Code": "GE"}, {"Code": "LU"}, {"Code": "PR"}, {"Code": "BT"}, {"Code": "PE"}, {"Code": "AO"}, {"Code": "ZM"}, {"Code": "MP"}, {"Code": "UZ"}, {"Code": "KP"}, {"Code": "UY"}, {"Code": "QA"}, {"Code": "CY"}, {"Code": "MU"}, {"Code": "CV"}, {"Code": "KH"}, {"Code": "VN"}, {"Code": "NI"}, {"Code": "PA"}, {"Code": "ML"},{"Code": "AG"}, {"Code": "CR"}, {"Code": "PG"}, {"Code": "NC"}, {"Code": "GR"}, {"Code": "FJ"}, 
-//{"Code": "WS"}, {"Code": "BF"}, {"Code": "TR"}, {"Code": "AZ"}, {"Code": "PS"}, {"Code": "BA"}, {"Code": "KM"}, {"Code": "MH"}, {"Code": "CO"}, {"Code": "KG"}, {"Code": "CM"}, {"Code": "GN"}, {"Code": "JO"}, {"Code": "DZ"}, {"Code": "YE"}, {"Code": "CL"}, {"Code": "MW"}, {"Code": "BD"}, {"Code": "SY"}, {"Code": "TZ"}, {"Code": "GQ"}, {"Code": "OM"}, {"Code": "SK"}, {"Code": "SD"}, {"Code": "MX"}, {"Code": "BR"}, {"Code": "TV"}, {"Code": "SV"}, {"Code": "JM"}, {"Code": "MT"}, {"Code": "PW"}, {"Code": "ET"}, {"Code": "LS"}, {"Code": "KZ"}, {"Code": "RS"}, {"Code": "TH"}, {"Code": "BY"}, {"Code": "CA"}, {"Code": "JP"}, {"Code": "MY"}, {"Code": "NA"}, {"Code": "SI"}, {"Code": "SO"}, {"Code": "BS"}, {"Code": "AR"}, {"Code": "KE"}, {"Code": "MD"}, {"Code": "HU"}, {"Code": "SN"}, {"Code": "TC"}, {"Code": "GY"}, {"Code": "LR"}, {"Code": "BE"}, {"Code": "LB"}, {"Code": "GD"}, {"Code": "MQ"}, {"Code": "SR"}, {"Code": "IR"}, {"Code": "KY"}, {"Code": "SS"}, {"Code": "IL"}, {"Code": "SE"}, {"Code": "BZ"}, {"Code": "AF"}, {"Code": "SL"}, {"Code": "BW"}, {"Code": "VE"}, {"Code": "RE"}, {"Code": "RU"}, {"Code": "ES"}, {"Code": "GH"}, {"Code": "SA"}, {"Code": "SC"}, {"Code": "EC"}, {"Code": "TO"}, {"Code": "BM"}, {"Code": "TW"}, {"Code": "IT"}, {"Code": "MZ"}, {"Code": "DJ"}, {"Code": "EE"}, {"Code": "BG"}, {"Code": "MF"}, {"Code": "SB"}, {"Code": "CI"}, {"Code": "TN"}, {"Code": "MV"}, {"Code": "LY"}, {"Code": "AU"}, {"Code": "NG"}, {"Code": "RO"}, {"Code": "IQ"}, {"Code": "DE"}, {"Code": "KR"}, {"Code": "MM"}, {"Code": "LA"}, {"Code": "AM"}, {"Code": "CH"}, {"Code": "US"}, {"Code": "CN"}, {"Code": "AI"}, {"Code": "DO"}, {"Code": "BO"}, {"Code": "PT"}, {"Code": "YT"}, {"Code": "MR"}, {"Code": "MG"}, {"Code": "GU"}, {"Code": "HR"}, {"Code": "PK"}, {"Code": "AT"}, {"Code": "GF"}, {"Code": "GA"}, {"Code": "IE"}, {"Code": "BJ"}, {"Code": "ZA"}, {"Code": "TJ"}, {"Code": "IN"}, {"Code": "EH"}, {"Code": "LV"}, {"Code": "HT"}, {"Code": "TD"}, {"Code": "LT"}, {"Code": "TL"}, {"Code": "GL"}, {"Code": "RW"}, {"Code": "CD"}, {"Code": "HN"}, {"Code": "KW"}, {"Code": "BN"}, {"Code": "TT"}, {"Code": "ZW"}, {"Code": "VC"}, {"Code": "SZ"}, {"Code": "MK"}, {"Code": "CG"}, {"Code": "CF"}, {"Code": "AS"}, {"Code": "CU"}, {"Code": "MS"}, {"Code": "ER"}, {"Code": "GP"}]
-//let countriesCode = [{"Code": "NP"}, {"Code": "AL"}, {"Code": "US"}, {"Code": "CH"}];
-let temps = 500;
 let isOver=false;
-let idFlag="FR";
+let answerCode = '';
 var countdownNumberEl = document.getElementById('countdown-number');
 var countdown = 500;
 function strNoAccent(a) {
-    var b="áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ-",
-        c="aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY ",
+    var b="áàâäãåçéèêëíïîìñóòôöõúùûüýÁÀÂÄÃÅÇÉÈÊËÍÏÎÌÑÓÒÔÖÕÚÙÛÜÝ",
+        c="aaaaaaceeeeiiiinooooouuuuyAAAAAACEEEEIIIINOOOOOUUUUY",
         d="";
     for(var i = 0, j = a.length; i < j; i++) {
       var e = a.substr(i, 1);
@@ -435,9 +420,11 @@ function diminuerTemps() {
 
 function getRandomFlag() {
     let number = Math.floor(Math.random() * keysSimplifie.length);
-	// console.log(keysSimplifie[number])
-    document.getElementById("flag").src = "https://countryflagsapi.com/png/" + keysSimplifie[number];
+	console.log(keysSimplifie[number])
+    document.getElementById("flag").src = "https://flagcdn.com/160x120/" + keysSimplifie[number].toLowerCase() + ".png";
+	answerCode = document.getElementById("flag").src.slice(28, 30).toUpperCase();
     keysSimplifie.splice(number, 1);
+    valuesSimplifie.splice(number, 1);
 }
 
 function getKeyValue(ele) {
@@ -449,15 +436,10 @@ function getKeyValue(ele) {
     if(event.key === 'Enter') {
         let input = document.getElementById("reponse");
         let answer = strNoAccent(input.value).toUpperCase();
-		if (answer==="J'AIME LA GROSSE QUEUE D'ILIAN") {
-			score2+=500;
-		}
-        // console.log(answer);
-        //values.includes(input) && 
-
+        console.log(answer); 
         if (values.includes(answer) && answer.charAt(0)===pays[keys[number]].charAt(0)) {
-            // console.log(values)
-            // console.log(values.indexOf(answer));
+            console.log(values)
+            console.log(values.indexOf(answer));
             changeColor2(keys[values.indexOf(answer)], "green");
             keys.splice(values.indexOf(answer), 1);
             values.splice(values.indexOf(answer),1);
@@ -467,31 +449,9 @@ function getKeyValue(ele) {
 			score2+=1;
         }
 		document.getElementById("score2").innerHTML="Score : " + score2;
-        // if(input.value === pays[keys[number]])
-        // {
-        //     changeColor2(keys[number], "green")
-        //     keys.splice(number, 1);
-        //     number = Math.floor(Math.random() * keys.length);
-        //     document.getElementById("nomPays").innerHTML = pays[keys[number]].charAt(0)
-        // }
        input.value = ""
     }
 }
-/*
-function changeMode(choix)
-{
-    if(choix == 1)
-    {
-        mode = choix;
-        document.getElementById("mode").innerHTML = 'Mode Facile';
-    }
-    if(choix == 2)
-    {
-        mode = choix;
-        document.getElementById("mode").innerHTML = 'Mode Difficile'; 
-    }
-}
-*/
 function changeColor(code, color) {
     var styles = '.mapsl #'+code+' {' +
         'fill: '+color+';' +
@@ -517,7 +477,6 @@ async function gameOver() {
         document.getElementById('mySvg').setAttribute("opacity", '0');
         countdownNumberEl.textContent = "";
         await sleep(100);
-        var answerCode = document.getElementById("flag").src.slice(-2);
         isOver=true;
         changeColor(answerCode,"red");
         alert("GAME OVER");
@@ -526,21 +485,19 @@ async function gameOver() {
 }
 
 function test(code) {
-	// console.log(pays[code]);
-    var answerCode = document.getElementById("flag").src.slice(-2);
+	console.log(pays[code]);
+	console.log("answer code " + answerCode)
     if (isOver) {
         return;
     }
-    changeColor();
-    // document.getElementsByClassName(code).setAttribute("id","check");
     if(answerCode == code) {
         score ++;
+        changeColor(answerCode,"green");
         try {
             getRandomFlag();
         } catch {
-            console.log("PÃ©riode d'essai terminÃ©");
+            console.log("Periode d'essai terminée");
         }
-        changeColor(answerCode,"green");
     }
     else{
         triesNumber --;
@@ -554,11 +511,9 @@ function test(code) {
         }
     }
     document.getElementById("score").innerHTML = 'Score : ' + score;
-    // console.log("essais restant:" + triesNumber);
-    // console.log("score :" + score);
-    //console.log(code)
+    console.log("essais restant:" + triesNumber);
+    console.log("score :" + score);
 }
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-
