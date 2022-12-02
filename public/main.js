@@ -435,7 +435,7 @@ function diminuerTemps() {
 function getRandomFlag() {
     let number = Math.floor(Math.random() * keysSimplifie.length);
 	console.log(keysSimplifie[number])
-    document.getElementById("flag").src = "https://countryflagsapi.com/png/" + keysSimplifie[number];
+    document.getElementById("flag").src = "https://flagcdn.com/160x120/" + keysSimplifie[number].toLowerCase() + ".png";
     keysSimplifie.splice(number, 1);
     valuesSimplifie.splice(number, 1);
 }
@@ -449,9 +449,6 @@ function getKeyValue(ele) {
     if(event.key === 'Enter') {
         let input = document.getElementById("reponse");
         let answer = strNoAccent(input.value).toUpperCase();
-		if (answer==="J'AIME LA GROSSE QUEUE D'ILIAN") {
-			score2+=500;
-		}
         console.log(answer);
         //values.includes(input) && 
 
@@ -527,18 +524,20 @@ async function gameOver() {
 
 function test(code) {
 	console.log(pays[code]);
-    var answerCode = document.getElementById("flag").src.slice(-2);
+	//console.log("answer code " + answerCode)
+    var answerCode = document.getElementById("flag").src.slice(28, 30).toUpperCase();
+	console.log("answer code " + answerCode)
     if (isOver) {
         return;
     }
-    changeColor();
+    //changeColor(answerCode, "green");
     // document.getElementsByClassName(code).setAttribute("id","check");
     if(answerCode == code) {
         score ++;
         try {
             getRandomFlag();
         } catch {
-            console.log("PÃ©riode d'essai terminÃ©");
+            console.log("Periode d'essai terminée");
         }
         changeColor(answerCode,"green");
     }

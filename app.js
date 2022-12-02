@@ -3,17 +3,18 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 
+/*
 const connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
-    password : '',
+    password : 'root',
     database : 'gtf'
 });
-
+*/
 const app = express();
 app.set('view engine', 'html');
 app.engine('html', require('ejs').renderFile);
-app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(session({
     secret: 'secret',
     resave: true,
@@ -24,17 +25,23 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get('/', function(request, response) {
-    response.sendFile(path.join(__dirname + '/logintest.html'));
-
+   response.sendFile(path.join(__dirname + '/public/logintest.html'));
+    //response.render(path.join(__dirname+ '/public/logintest.html'));
 });
-
+app.get('/second.html', function(request, response) {
+    response.sendFile(path.join(__dirname + '/public/second.html'));
+    //response.render(path.join(__dirname+'/logintest.html'));
+});
 
 app.post('/auth', function(request, response) {
     let username = request.body.username;
     let password = request.body.password;
     console.log("yolegang");
     if (username && password) {
-        connection.query('SELECT * FROM compte WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
+        request.session.loggedin = true;
+        response.redirect('/index.html');
+        results = "yo"
+        /*connection.query('SELECT * FROM compte WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
             if (error) throw error;
             if (results.length > 0) {
                 request.session.loggedin = true;
@@ -43,8 +50,9 @@ app.post('/auth', function(request, response) {
                 response.send('Mauvais mot de passe');
             }
             response.end();
-        });
-    } else {
+        });*/
+    }
+    else {
         response.send('Svp rentrez un nom dutilisateur et un mot de passe');
         response.end();
     }
@@ -58,5 +66,5 @@ app.get('/index', function(request, response) {
     }
     response.end();
 });
-
+app.use(express.static(path.join(__dirname, '/public')));
 app.listen(3000);
